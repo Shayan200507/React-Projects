@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+}
+
+
+.Head{
+
+  display: flex;
+
+  background: purple;
+  color: white;
+  align-items: center;
+  height: 65px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  color: white;
+  padding: 20px;
+ 
+}
+
+.Head > img{
+ 
+  width: 50px;
+  padding-right: 10px;
+    
+
+}
+
+.Input{
+  
+  display: grid;
+  grid-template: auto auto / 1fr 1fr;
+  gap: 17px;
+  margin-top: 20px;
+
+ 
+  
+
+
+
+
+}
+
+
+main {
+    margin-inline: auto;
+    padding: 36px;
+    max-width: 600px;
+}
+.Input > label{
+  display: flex;
+  flex-direction: column;
+}
+
+.Input > label > input{
+  height: 30px;
+
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+
+}
+
+
+.Input > button {
+    grid-column: 1 / -1;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
