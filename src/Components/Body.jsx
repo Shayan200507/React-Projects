@@ -1,7 +1,11 @@
 
 import { useState } from "react";
+import { useEffect } from "react";
 
 const Body = () => {
+
+
+    const [memeArray,setMemeArray] = useState([])
 
 
     const [properties, setProperties] = useState({
@@ -15,6 +19,33 @@ const Body = () => {
 
 
     })
+
+
+    useEffect(()=>{
+
+         fetch("https://api.imgflip.com/get_memes")
+         .then(res => res.json())
+         .then(obj =>setMemeArray(obj.data.memes.map((prev) => {
+
+                
+            return(prev.url)
+
+
+
+
+
+
+
+         })))
+
+
+
+        
+
+
+
+
+    },[])
 
 
     function handleChange(event){
