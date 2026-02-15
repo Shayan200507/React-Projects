@@ -21,6 +21,17 @@ const Body = () => {
     })
 
 
+    function changeImage(){
+
+
+           setProperties((prev) => { return({...prev, imgUrl: memeArray[Math.floor(Math.random() * memeArray.length)] })})
+
+
+
+
+    }
+
+
     useEffect(()=>{
 
          fetch("https://api.imgflip.com/get_memes")
@@ -78,7 +89,7 @@ return(
     </label>
 
 
-    <button>Get a new meme image 🖼</button>
+    <button onClick={changeImage}>Get a new meme image 🖼</button>
 
 
 
